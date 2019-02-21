@@ -1,0 +1,28 @@
+main {
+  padding: 5% 20%;
+  display: flex;
+  justify-content: space-between;
+
+  height: 100vh;
+  background-color: #ecf7ff;
+}
+
+.hello {
+  width: 40%;
+}
+
+.photo {
+  display: block;
+  height: 60vh;
+
+  border-radius: 30px;
+}
+
+.title {
+  font-size: 3em;
+}
+
+.subtitle {
+  font-size: 1em;
+  font-weight: 100;
+}

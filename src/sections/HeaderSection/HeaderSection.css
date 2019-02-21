@@ -2,9 +2,8 @@
   display: flex;
   padding: 30px 20%;
   background-color: #ecf7ff;
-}
-
-.logo {
+  position: sticky;
+  top: 0;
 }
 
 .navbar {
