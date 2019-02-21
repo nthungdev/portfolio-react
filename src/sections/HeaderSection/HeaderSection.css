@@ -1,0 +1,22 @@
+.header-section-primary {
+  display: flex;
+  padding: 30px 20%;
+  background-color: #ecf7ff;
+}
+
+.logo {
+}
+
+.navbar {
+  /* background-color: green; */
+  padding: 10px 50px;
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navbar .nav-button {
+  margin: 0 10px;
+}

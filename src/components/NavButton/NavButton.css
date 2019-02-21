@@ -1,0 +1,63 @@
+.nav-button {
+  text-align: center;
+  font-weight: 600;
+}
+
+a:link {
+  padding: 5px 10px;
+  color: #0088ff;
+  text-decoration: none;
+}
+/* visited link */
+a:visited {
+  padding: 5px 10px;
+  color: #0088ff;
+}
+
+/* mouse over link */
+a:hover {
+  border-radius: 30px;
+  /* background-color: lightblue; */
+  padding: 5px 10px;
+  color: #0088ff;
+}
+
+/* selected link */
+a:active {
+  padding: 5px 10px;
+  color: #0088ff;
+}
+
+a.disabled {
+  padding: 5px 10px;
+  color: rgb(181, 220, 255);
+  text-decoration: none;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 0.2s;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes fade-out {
+  0% {
+    color: #0088ff;
+  }
+  100% {
+    color: rgb(181, 220, 255);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    color: rgb(181, 220, 255);
+  }
+  100% {
+    color: #0088ff;
+  }
+}
