@@ -2,35 +2,23 @@
   text-align: center;
   font-weight: 600;
   font-size: 1.5em;
+
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
 }
 
-a:link {
-  padding: 5px 10px;
+a:link.nav-button,
+a:visited.nav-button,
+a:hover.nav-button,
+a:active.nav-button {
+  display: flex;
   color: #0088ff;
   text-decoration: none;
 }
-/* visited link */
-a:visited {
-  padding: 5px 10px;
-  color: #0088ff;
-}
 
-/* mouse over link */
-a:hover {
-  border-radius: 30px;
-  /* background-color: lightblue; */
-  padding: 5px 10px;
-  color: #0088ff;
-}
-
-/* selected link */
-a:active {
-  padding: 5px 10px;
-  color: #0088ff;
-}
-
-a.disabled {
-  padding: 5px 10px;
+a.disabled.nav-button {
+  /* padding: 5px 10px; */
   color: rgb(181, 220, 255);
   text-decoration: none;
 }

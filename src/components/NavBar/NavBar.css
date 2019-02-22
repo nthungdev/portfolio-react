@@ -1,0 +1,32 @@
+.header-section-primary {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  padding: 2vh 0px;
+  background-color: #ecf7ff;
+  height: 4rem;
+}
+
+.navbar-buttons-bar {
+  /* padding: 10px 50px; */
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* grid-column: 2; */
+}
+
+.nav-button {
+  padding: 0 20px;
+}
+
+.page-logo {
+  display: flex;
+  align-items: center;
+  /* grid-column: 2; */
+}
+
+.page-logo-navbar-wrapper {
+  grid-column: 2;
+  display: flex;
+}

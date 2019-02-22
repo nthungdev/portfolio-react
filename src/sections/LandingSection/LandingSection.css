@@ -1,10 +1,22 @@
-main {
-  padding: 5% 20%;
+.landing-section {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  background-color: lightcoral;
+}
+
+.navbar-landing-body-wrapper {
+  grid-column: 2;
+}
+
+.landing-body {
+  padding: auto 20%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
-  height: 100vh;
-  background-color: #ecf7ff;
+  height: calc(100vh - 4rem);
+  /* background-color: #ecf7ff; */
+  background-color: lightcoral;
 }
 
 .hello {
