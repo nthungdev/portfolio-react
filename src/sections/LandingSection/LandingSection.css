@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 10% 1fr 10%;
   background-color: lightcoral;
+  height: calc(100vh - 4rem - 4vh);
+  align-items: center;
 }
 
 .navbar-landing-body-wrapper {
@@ -9,18 +11,17 @@
 }
 
 .landing-body {
+  grid-column: 2;
   padding: auto 20%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  height: calc(100vh - 4rem);
-  /* background-color: #ecf7ff; */
+  justify-content: space-evenly;
   background-color: lightcoral;
 }
 
 .hello {
   width: 40%;
+  align-self: flex-start;
 }
 
 .photo {

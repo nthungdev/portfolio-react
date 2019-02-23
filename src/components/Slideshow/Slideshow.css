@@ -1,0 +1,38 @@
+.slideshow {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas:
+    "back viewer next"
+    ". indicator .";
+  background-color: lightseagreen;
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow-viewer {
+  height: 100%;
+  width: 100%;
+  grid-area: viewer;
+
+  /* temp */
+  background-color: lightblue;
+}
+
+.slideshow-back {
+  grid-area: back;
+  /* temp */
+  background-color: lightslategray;
+}
+
+.slideshow-next {
+  grid-area: next;
+  /* temp */
+  background-color: lightslategray;
+}
+
+.slideshow-indicator {
+  grid-area: indicator;
+  /* temp */
+  background-color: lightgoldenrodyellow;
+}

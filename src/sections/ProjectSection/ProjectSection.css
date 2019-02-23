@@ -1,0 +1,21 @@
+.project-section {
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+    ". title ."
+    ". slideshow .";
+  align-items: center;
+
+  background-color: lightpink;
+  height: calc(100vh - 4rem - 4vh);
+}
+
+.project-section-title {
+  grid-area: title;
+}
+
+.project-section-slideshow {
+  grid-area: slideshow;
+  height: 100%;
+}
