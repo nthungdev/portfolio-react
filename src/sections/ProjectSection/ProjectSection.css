@@ -1,10 +1,16 @@
+* {
+  /* border: 1px black solid; */
+}
+
 .project-section {
   display: grid;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 2fr 10fr 1fr;
   grid-template-areas:
+    ". . ."
     ". title ."
-    ". slideshow .";
+    ". slideshow ."
+    ". . .";
   align-items: center;
 
   background-color: lightpink;
@@ -13,6 +19,12 @@
 
 .project-section-title {
   grid-area: title;
+  text-align: center;
+  align-self: start;
+}
+
+.project-section-title h1 {
+  margin: 0;
 }
 
 .project-section-slideshow {

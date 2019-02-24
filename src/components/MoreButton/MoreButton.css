@@ -1,0 +1,26 @@
+.more-button {
+  font-weight: 600;
+  font-size: 1.5em;
+  width: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #424242;
+  color: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+a:link.more-button,
+a:visited.more-button,
+a:hover.more-button,
+a:active.more-button {
+  display: flex;
+  color: #0088ff;
+  text-decoration: none;
+}
+
+a.disabled.more-button {
+  /* padding: 5px 10px; */
+  color: rgb(181, 220, 255);
+  text-decoration: none;
+}

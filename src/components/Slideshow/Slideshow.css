@@ -1,6 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid grey;
+}
+
 .slideshow {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 8fr 1fr;
   grid-template-rows: 4fr 1fr;
   grid-template-areas:
     "back viewer next"
@@ -10,13 +16,98 @@
   width: 100%;
 }
 
-.slideshow-viewer {
-  height: 100%;
-  width: 100%;
+.slideshow-viewer-wrapper {
+  /* height: 100%;
+  width: 100%; */
   grid-area: viewer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   /* temp */
-  background-color: lightblue;
+  background-color: white;
+}
+
+.slideshow-viewer {
+  width: 114vh;
+  height: 57vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 30px;
+  border: solid 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+
+  /* temp */
+  /* background-color: lightblue; */
+}
+
+.slideshow-viewer-left-panel {
+  grid-column: 1;
+  border-radius: 30px 0 0 30px;
+  /* temp */
+  background-color: lightgreen;
+}
+
+.slideshow-viewer-right-panel {
+  grid-column: 2;
+  border-radius: 0 30px 30px 0;
+  padding: 0 10%;
+  padding-bottom: 10%;
+  display: grid;
+  grid-template-rows: 2fr 6fr auto;
+  /* align-items: center; */
+
+  /* temp */
+  background-color: white;
+}
+
+.slideshow-viewer-right-panel-title {
+  grid-row: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 1.75em;
+}
+
+.slideshow-viewer-right-panel-body {
+  grid-row: 2;
+  /* height: 100%; */
+  max-width: 100%;
+  max-height: 80%;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  min-width: 0;
+  min-height: 0;
+  /* temp */
+  /* background-color: lightpink; */
+}
+
+.slideshow-viewer-right-panel-body-text {
+  /* max-height: 100%; */
+  text-align: justify;
+  /* line-clamp: 4; */
+}
+
+.slideshow-viewer-right-panel-button-bar {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  /* temp */
+  /* background-color: lightblue; */
+}
+
+.slideshow-viewer-right-panel-more-button {
+  grid-column: 1;
+}
+
+.slideshow-viewer-right-panel-social-buttons {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .slideshow-back {
