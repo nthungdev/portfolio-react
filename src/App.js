@@ -10,8 +10,8 @@ class App extends Component {
       <div className="root">
         <div className="content">
           <NavBar />
-          <LandingSection />
-          <ProjectSection />
+          {/* <LandingSection /> */}
+          {/* <ProjectSection /> */}
         </div>
       </div>
     );

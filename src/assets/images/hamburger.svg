@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.54" height="33" viewBox="0 0 36.54 33">
+  <defs>
+    <clipPath id="clip-Hamburger">
+      <rect width="36.54" height="33"/>
+    </clipPath>
+  </defs>
+  <g id="Hamburger" clip-path="url(#clip-Hamburger)">
+    <rect width="36.54" height="33" fill="#fff"/>
+    <g id="menu-button-of-three-horizontal-lines" transform="translate(0 -6)">
+      <path id="Path_10" data-name="Path 10" d="M33,6H3.536a3.629,3.629,0,0,0,0,7.256H33A3.629,3.629,0,0,0,33,6Z" transform="translate(0 0)" fill="#08f"/>
+      <path id="Path_11" data-name="Path 11" d="M33,50H3.536a3.629,3.629,0,0,0,0,7.256H33A3.629,3.629,0,0,0,33,50Z" transform="translate(0 -31.128)" fill="#08f"/>
+      <path id="Path_12" data-name="Path 12" d="M33,94H3.536a3.629,3.629,0,0,0,0,7.256H33A3.629,3.629,0,0,0,33,94Z" transform="translate(0 -62.256)" fill="#08f"/>
+    </g>
+  </g>
+</svg>

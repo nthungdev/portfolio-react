@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33">
+  <defs>
+    <clipPath id="clip-Hamburger_1">
+      <rect width="33" height="33"/>
+    </clipPath>
+  </defs>
+  <g id="Hamburger_1" data-name="Hamburger – 1" clip-path="url(#clip-Hamburger_1)">
+    <rect width="33" height="33" fill="#fff"/>
+    <g id="close" transform="translate(0 -0.001)">
+      <path id="Path_13" data-name="Path 13" d="M19.419,16.5,32.4,3.524A2.064,2.064,0,0,0,29.478.606L16.5,13.583,3.523.606A2.064,2.064,0,0,0,.6,3.524L13.583,16.5.6,29.479A2.063,2.063,0,1,0,3.523,32.4L16.5,19.419,29.478,32.4A2.064,2.064,0,0,0,32.4,29.478Z" transform="translate(0)" fill="#08f"/>
+    </g>
+  </g>
+</svg>

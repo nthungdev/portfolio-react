@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PageLogo from "../../assets/logos/logo.png";
+import Hamburger from "../../assets/images/hamburger.svg";
+import Close from "../../assets/images/close.svg";
 import NavButton from "../../components/NavButton/NavButton";
 import "./NavBar.css";
 
@@ -66,26 +68,30 @@ class NavBar extends Component {
 
   render() {
     return (
-      <header className="header-section-primary">
-        <div className="page-logo-navbar-wrapper">
-          <div className="page-logo">
-            <img src={PageLogo} alt="Logo of the page" />
-          </div>
-          <nav className="navbar-buttons-bar">
-            {this.state.buttons.map(button => (
-              <NavButton
-                className={button.className}
-                text={button.text}
-                href={button.href}
-                isDisabled={button.isDisabled}
-                onMouseOver={() => this.onMouseOver(button)}
-                onMouseOut={() => this.onMouseOut(button)}
-                onClick={this.onClick}
-              />
-            ))}
-          </nav>
+      <nav className="nav-bar">
+        <div className="nav-bar--logo-wrapper">
+          <img src={PageLogo} alt="Logo of the page" />
         </div>
-      </header>
+        <div className="nav-bar--hamburger-wrapper">
+          <img src={Hamburger} />
+        </div>
+        <div className="nav-bar--button-bar">
+          <div className="nav-bar--close">
+            <img src={Close} />
+          </div>
+          {this.state.buttons.map(button => (
+            <NavButton
+              className={button.className}
+              text={button.text}
+              href={button.href}
+              isDisabled={button.isDisabled}
+              onMouseOver={() => this.onMouseOver(button)}
+              onMouseOut={() => this.onMouseOut(button)}
+              onClick={this.onClick}
+            />
+          ))}
+        </div>
+      </nav>
     );
   }
 }
