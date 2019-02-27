@@ -5,11 +5,14 @@ import Close from "../../assets/images/close.svg";
 import NavButton from "../../components/NavButton/NavButton";
 import "./NavBar.css";
 
+var navBarHeight;
+
 class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isToggleOn: true,
+      navBarHeight: "",
       buttons: [
         {
           text: "Home",
@@ -38,7 +41,13 @@ class NavBar extends Component {
       ]
     };
     this.onHover = this.onMouseOver.bind(this);
-    this.onClick = this.onClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      navBarHeight: document.getElementById("nav-bar").clientHeight + "px"
+    });
+    console.log("nar-bar height: ", this.state.navBarHeight);
   }
 
   onMouseOver(button) {
@@ -64,32 +73,55 @@ class NavBar extends Component {
     });
   }
 
-  onClick() {}
+  openSideNav = () => {
+    document.getElementById("nav-bar--button-bar").style.width = "75vw";
+    document.getElementById("nav-bar--button-bar-wrapper").style.width = "30vw";
+  };
+
+  closeSideNav = () => {
+    document.getElementById("nav-bar--button-bar").style.width = "0px";
+    document.getElementById("nav-bar--button-bar-wrapper").style.width = "0px";
+  };
 
   render() {
+    console.log("nar-bar height: ", this.state.navBarHeight);
+
     return (
-      <nav className="nav-bar">
+      <nav id="nav-bar" className="nav-bar">
         <div className="nav-bar--logo-wrapper">
           <img src={PageLogo} alt="Logo of the page" />
         </div>
         <div className="nav-bar--hamburger-wrapper">
-          <img src={Hamburger} />
+          <img onClick={this.openSideNav} src={Hamburger} />
         </div>
-        <div className="nav-bar--button-bar">
-          <div className="nav-bar--close">
-            <img src={Close} />
+        <div
+          id="nav-bar--button-bar-wrapper"
+          className="nav-bar--button-bar-wrapper"
+          onClick={this.closeSideNav}
+        >
+          <div id="nav-bar--button-bar" className="nav-bar--button-bar">
+            <div
+              className="nav-bar--close"
+              style={{ height: this.state.navBarHeight }}
+            >
+              <img onClick={this.closeSideNav} src={Close} />
+            </div>
+            <div className="nav-bar--button-bar-button-wrapper">
+              {this.state.buttons.map(button => (
+                <div className="nav-bar--nav-button">
+                  <NavButton
+                    className={button.className}
+                    text={button.text}
+                    href={button.href}
+                    isDisabled={button.isDisabled}
+                    onMouseOver={() => this.onMouseOver(button)}
+                    onMouseOut={() => this.onMouseOut(button)}
+                    onClick={this.onClick}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          {this.state.buttons.map(button => (
-            <NavButton
-              className={button.className}
-              text={button.text}
-              href={button.href}
-              isDisabled={button.isDisabled}
-              onMouseOver={() => this.onMouseOver(button)}
-              onMouseOut={() => this.onMouseOut(button)}
-              onClick={this.onClick}
-            />
-          ))}
         </div>
       </nav>
     );
