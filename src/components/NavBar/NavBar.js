@@ -88,33 +88,34 @@ class NavBar extends Component {
         <div className="nav-bar--hamburger-wrapper">
           <img onClick={this.openSideNav} src={Hamburger} />
         </div>
+
         <div
           id="nav-bar--button-bar-wrapper"
           className="nav-bar--button-bar-wrapper"
           onClick={this.closeSideNav}
-        >
-          <div id="nav-bar--button-bar" className="nav-bar--button-bar">
-            <div
-              className="nav-bar--close"
-              style={{ height: this.state.navBarHeight }}
-            >
-              <img onClick={this.closeSideNav} src={Close} />
-            </div>
-            <div className="nav-bar--button-bar-button-wrapper">
-              {this.state.buttons.map(button => (
-                <div className="nav-bar--nav-button">
-                  <NavButton
-                    className={button.className}
-                    text={button.text}
-                    href={button.href}
-                    isDisabled={button.isDisabled}
-                    onMouseOver={() => this.onMouseOver(button)}
-                    onMouseOut={() => this.onMouseOut(button)}
-                    onClick={this.onClick}
-                  />
-                </div>
-              ))}
-            </div>
+        />
+
+        <div id="nav-bar--button-bar" className="nav-bar--button-bar">
+          <div
+            className="nav-bar--close"
+            style={{ height: this.state.navBarHeight }}
+          >
+            <img onClick={this.closeSideNav} src={Close} />
+          </div>
+          <div className="nav-bar--button-bar-button-wrapper">
+            {this.state.buttons.map(button => (
+              <div className="nav-bar--nav-button">
+                <NavButton
+                  className={button.className}
+                  text={button.text}
+                  href={button.href}
+                  isDisabled={button.isDisabled}
+                  onMouseOver={() => this.onMouseOver(button)}
+                  onMouseOut={() => this.onMouseOut(button)}
+                  onClick={this.onClick}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </nav>
