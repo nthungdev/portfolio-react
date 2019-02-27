@@ -43,13 +43,6 @@ class NavBar extends Component {
     this.onHover = this.onMouseOver.bind(this);
   }
 
-  componentDidMount() {
-    this.setState({
-      navBarHeight: document.getElementById("nav-bar").clientHeight + "px"
-    });
-    console.log("nar-bar height: ", this.state.navBarHeight);
-  }
-
   onMouseOver(button) {
     const buttons = [...this.state.buttons];
     buttons.forEach(item => {
@@ -74,6 +67,9 @@ class NavBar extends Component {
   }
 
   openSideNav = () => {
+    this.setState({
+      navBarHeight: document.getElementById("nav-bar").scrollHeight + "px"
+    });
     document.getElementById("nav-bar--button-bar").style.width = "75vw";
     document.getElementById("nav-bar--button-bar-wrapper").style.width = "30vw";
   };
@@ -84,8 +80,6 @@ class NavBar extends Component {
   };
 
   render() {
-    console.log("nar-bar height: ", this.state.navBarHeight);
-
     return (
       <nav id="nav-bar" className="nav-bar">
         <div className="nav-bar--logo-wrapper">
