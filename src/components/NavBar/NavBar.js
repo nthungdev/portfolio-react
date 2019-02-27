@@ -5,8 +5,6 @@ import Close from "../../assets/images/close.svg";
 import NavButton from "../../components/NavButton/NavButton";
 import "./NavBar.css";
 
-var navBarHeight;
-
 class NavBar extends Component {
   constructor(props) {
     super(props);
@@ -43,6 +41,10 @@ class NavBar extends Component {
     this.onHover = this.onMouseOver.bind(this);
   }
 
+  componentDidMount() {
+    document.getElementById("nav-bar").style.height = "auto";
+  }
+
   onMouseOver(button) {
     const buttons = [...this.state.buttons];
     buttons.forEach(item => {
@@ -71,12 +73,13 @@ class NavBar extends Component {
       navBarHeight: document.getElementById("nav-bar").scrollHeight + "px"
     });
     document.getElementById("nav-bar--button-bar").style.width = "75vw";
-    document.getElementById("nav-bar--button-bar-wrapper").style.width = "30vw";
+    document.getElementById("nav-bar--button-bar-blackout").style.width =
+      "30vw";
   };
 
   closeSideNav = () => {
     document.getElementById("nav-bar--button-bar").style.width = "0px";
-    document.getElementById("nav-bar--button-bar-wrapper").style.width = "0px";
+    document.getElementById("nav-bar--button-bar-blackout").style.width = "0px";
   };
 
   render() {
@@ -86,12 +89,16 @@ class NavBar extends Component {
           <img src={PageLogo} alt="Logo of the page" />
         </div>
         <div className="nav-bar--hamburger-wrapper">
-          <img onClick={this.openSideNav} src={Hamburger} />
+          <img
+            onClick={this.openSideNav}
+            src={Hamburger}
+            alt="Side bar toggler"
+          />
         </div>
 
         <div
-          id="nav-bar--button-bar-wrapper"
-          className="nav-bar--button-bar-wrapper"
+          id="nav-bar--button-bar-blackout"
+          className="nav-bar--button-bar-blackout"
           onClick={this.closeSideNav}
         />
 
@@ -102,6 +109,7 @@ class NavBar extends Component {
           >
             <img onClick={this.closeSideNav} src={Close} />
           </div>
+
           <div className="nav-bar--button-bar-button-wrapper">
             {this.state.buttons.map(button => (
               <div className="nav-bar--nav-button">
