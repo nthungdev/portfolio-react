@@ -4,7 +4,10 @@ import "./FlatButton.css";
 class FlatButton extends Component {
   render() {
     return (
-      <div className="flat-button-wrapper">
+      <div
+        className="flat-button-wrapper"
+        style={this.props.fontSize ? { fontSize: this.props.fontSize } : null}
+      >
         <button className="flat-button" onClick={this.props.onClick}>
           <p>{this.props.title}</p>
         </button>

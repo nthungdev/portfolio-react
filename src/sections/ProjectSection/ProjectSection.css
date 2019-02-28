@@ -4,8 +4,17 @@
   justify-content: space-evenly;
   align-items: center;
 
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
   /* background-color: lightpink; */
+}
+
+.project-section--title {
+  font-size: var(--section-title-font-size);
+}
+
+.project-section--indicator {
+  width: 25vw;
 }
 
 /* .project-section {

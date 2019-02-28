@@ -1,4 +1,6 @@
 .root {
+  --section-title-font-size: 2em;
+
   display: flex;
   flex-direction: column;
   /* grid-template-columns: auto 1fr 10%; */

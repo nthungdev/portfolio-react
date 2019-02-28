@@ -115,7 +115,10 @@ class NavBar extends Component {
 
           <div className="nav-bar--button-bar-button-wrapper">
             {this.state.buttons.map(button => (
-              <div className="nav-bar--nav-button">
+              <div
+                className="nav-bar--nav-button"
+                key={this.state.buttons.indexOf(button)}
+              >
                 <NavButton
                   padding="50px var(--side-margin)"
                   className={button.className}

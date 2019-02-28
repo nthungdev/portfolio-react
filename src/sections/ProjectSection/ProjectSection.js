@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ProjectSection.css";
+import DotIndicator from "../../components/DotIndicator/DotIndicator";
 
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
@@ -25,7 +26,9 @@ class ProjectSection extends Component {
              real time displayed on a map."
           />
         </div>
-        <div className="project-section--indicator" />
+        <div className="project-section--indicator">
+          <DotIndicator count="3" />
+        </div>
       </div>
     );
   }

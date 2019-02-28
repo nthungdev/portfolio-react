@@ -51,7 +51,7 @@ class ProjectCard extends Component {
               <FlatButton title="MORE" />
             </div>
             <div className="project-card--description-panel-button-bar-right">
-              <IconButton icon={GithubIcon} height="2.5em" />
+              <IconButton icon={GithubIcon} />
             </div>
           </div>
         </div>
