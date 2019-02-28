@@ -11,7 +11,7 @@ class App extends Component {
         <div className="content">
           <NavBar />
           <LandingSection />
-          {/* <ProjectSection /> */}
+          <ProjectSection />
         </div>
       </div>
     );

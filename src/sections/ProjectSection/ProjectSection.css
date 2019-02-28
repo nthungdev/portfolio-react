@@ -1,8 +1,14 @@
-* {
-  /* border: 1px black solid; */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 100vh;
+  /* background-color: lightpink; */
 }
 
-.project-section {
+/* .project-section {
   display: grid;
   grid-template-columns: 5% 1fr 5%;
   grid-template-rows: 1fr 2fr 10fr 1fr;
@@ -14,7 +20,7 @@
   align-items: center;
 
   background-color: lightpink;
-  height: calc(100vh - 4rem - 4vh);
+  height: 100vh;
 }
 
 .project-section-title {
@@ -30,4 +36,4 @@
 .project-section-slideshow {
   grid-area: slideshow;
   height: 100%;
-}
+} */
