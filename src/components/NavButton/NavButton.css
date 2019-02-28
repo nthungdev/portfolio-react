@@ -23,17 +23,17 @@ a.disabled.nav-button {
   text-decoration: none;
 }
 
-.fade-out {
-  animation-name: fade-out;
+.nav-button--fade-out {
+  animation-name: nav-button--fade-out;
   animation-duration: 0.2s;
 }
 
-.fade-in {
-  animation-name: fade-in;
+.nav-button--fade-in {
+  animation-name: nav-button--fade-in;
   animation-duration: 0.2s;
 }
 
-@keyframes fade-out {
+@keyframes nav-button--fade-out {
   0% {
     color: #0088ff;
   }
@@ -42,7 +42,7 @@ a.disabled.nav-button {
   }
 }
 
-@keyframes fade-in {
+@keyframes nav-button--fade-in {
   0% {
     color: rgb(181, 220, 255);
   }

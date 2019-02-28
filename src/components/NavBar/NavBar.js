@@ -39,11 +39,10 @@ class NavBar extends Component {
       ]
     };
     this.onHover = this.onMouseOver.bind(this);
+    this.onClick = this.onClick.bind(this);
   }
 
-  componentDidMount() {
-    document.getElementById("nav-bar").style.height = "auto";
-  }
+  componentDidMount() {}
 
   onMouseOver(button) {
     const buttons = [...this.state.buttons];
@@ -82,6 +81,10 @@ class NavBar extends Component {
     document.getElementById("nav-bar--button-bar-blackout").style.width = "0px";
   };
 
+  onClick = () => {
+    this.closeSideNav();
+  };
+
   render() {
     return (
       <nav id="nav-bar" className="nav-bar">
@@ -114,6 +117,7 @@ class NavBar extends Component {
             {this.state.buttons.map(button => (
               <div className="nav-bar--nav-button">
                 <NavButton
+                  padding="50px var(--side-margin)"
                   className={button.className}
                   text={button.text}
                   href={button.href}

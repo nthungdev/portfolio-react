@@ -10,7 +10,7 @@ class App extends Component {
       <div className="root">
         <div className="content">
           <NavBar />
-          {/* <LandingSection /> */}
+          <LandingSection />
           {/* <ProjectSection /> */}
         </div>
       </div>

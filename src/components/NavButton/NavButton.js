@@ -15,6 +15,7 @@ class NavButton extends Component {
         onMouseOver={this.props.onMouseOver}
         onMouseOut={this.props.onMouseOut}
         href={this.props.href}
+        style={this.props.padding ? { padding: this.props.padding } : null}
       >
         {this.props.text}
       </a>
