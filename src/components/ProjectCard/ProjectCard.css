@@ -31,7 +31,8 @@
 }
 
 .project-card--preview-panel-image {
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .project-card--description-panel {
@@ -54,10 +55,13 @@
 }
 
 .project-card--description-panel-information {
+  max-height: 50%;
+
   align-self: flex-start;
   font-size: 1em;
   text-align: justify;
   line-height: 1.75em;
+  overflow: hidden;
 }
 
 .project-card--description-panel-button-bar {

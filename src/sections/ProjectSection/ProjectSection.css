@@ -6,7 +6,6 @@
 
   min-height: 100vh;
   overflow: hidden;
-  /* background-color: lightpink; */
 }
 
 .project-section--title {
@@ -15,34 +14,14 @@
 
 .project-section--indicator {
   width: 25vw;
-}
+  max-width: 100px;
 
-/* .project-section {
-  display: grid;
-  grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 1fr 2fr 10fr 1fr;
-  grid-template-areas:
-    ". . ."
-    ". title ."
-    ". slideshow ."
-    ". . .";
+  display: flex;
   align-items: center;
-
-  background-color: lightpink;
-  height: 100vh;
 }
 
-.project-section-title {
-  grid-area: title;
-  text-align: center;
-  align-self: start;
+@media screen and (min-width: 1024px) {
+  .project-section--title {
+    font-size: 4em;
+  }
 }
-
-.project-section-title h1 {
-  margin: 0;
-}
-
-.project-section-slideshow {
-  grid-area: slideshow;
-  height: 100%;
-} */

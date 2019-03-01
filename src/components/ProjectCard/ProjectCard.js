@@ -9,6 +9,8 @@ class ProjectCard extends Component {
     super(props);
   }
 
+  componentDidMount() {}
+
   getBackgroundImage = () => {
     if (this.props.stop1 !== null && this.props.stop2 !== null) {
       return `linear-gradient(45deg, #${this.props.stop1}, #${
