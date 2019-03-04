@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "title": "Shuttler",
+      "description": "Shuttler is a mobile application, Android and iOS, to help students track the shuttler at SUNY Plattsburgh Users can see the shuttle position in real time displayed on a map.",
+      "imageURL": "https://www.psushuttle.com/static/media/ic_cellphone.c11ff642.png",
+      "gradientColor": {
+        "stop1": "ff547e",
+        "stop2": "ffb199"
+      },
+      "githubURL": "https://github.com/PSUCoders/shuttler_ios",
+      "projectURL": "https://github.com/PSUCoders/shuttler_ios"
+    },
+    {
+      "title": "Your Occasions",
+      "description": "Your Occasions will offer people easy access to events near them, where they are able to see available events in the area.",
+      "imageURL": "https://camo.githubusercontent.com/51e9c0061016b1dcf10622affa39358c1ddf2a2e/68747470733a2f2f692e696d6775722e636f6d2f503453335039452e706e67",
+      "gradientColor": {
+        "stop1": "ff547e",
+        "stop2": "ffb199"
+      },
+      "githubURL": "https://github.com/nthungdev/YourOccasions",
+      "projectURL": "https://github.com/nthungdev/YourOccasions"
+    }
+  ]
+}

@@ -2,8 +2,8 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
 
-  width: 80vw;
-  height: 160vw;
+  width: 70vw;
+  height: 140vw;
 }
 
 .project-card--preview-panel {
@@ -11,8 +11,8 @@
   align-items: center;
   justify-content: center;
 
-  height: 80vw;
-  width: 80vw;
+  height: 70vw;
+  width: 70vw;
 
   border-radius: 5% 5% 0 0;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
@@ -37,16 +37,16 @@
 
 .project-card--description-panel {
   box-sizing: border-box;
-  height: 80vw;
-  width: 80vw;
-  padding: 5% 10%;
+  height: 70vw;
+  width: 70vw;
+  padding: 10% 10%;
   border-radius: 0 0 5% 5%;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
   background-color: white;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -55,13 +55,14 @@
 }
 
 .project-card--description-panel-information {
-  max-height: 50%;
+  max-height: calc(1.75em * 5);
 
   align-self: flex-start;
   font-size: 1em;
   text-align: justify;
   line-height: 1.75em;
   overflow: hidden;
+  /* text-overflow: ellipsis; */
 }
 
 .project-card--description-panel-button-bar {
@@ -81,21 +82,21 @@
   .project-card {
     grid-template-columns: 1fr 1fr;
 
-    width: 80vw;
-    height: 40vw;
+    width: 70vw;
+    height: 35vw;
   }
 
   .project-card--preview-panel {
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
 
     border-radius: 5% 0 0 5%;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
   }
 
   .project-card--description-panel {
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
 
     border-radius: 0 5% 5% 0;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
@@ -103,6 +104,29 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .project-card {
+    grid-template-columns: 1fr 1fr;
+
+    width: 70vw;
+    height: 35vw;
+  }
+
+  .project-card--preview-panel {
+    width: 35vw;
+    height: 35vw;
+
+    border-radius: 5% 0 0 5%;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-card--description-panel {
+    width: 35vw;
+    height: 35vw;
+
+    border-radius: 0 5% 5% 0;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  }
+
   .project-card--description-panel-title {
     font-size: 2.5em;
   }

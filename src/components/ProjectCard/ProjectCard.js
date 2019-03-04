@@ -4,12 +4,22 @@ import GithubIcon from "../../assets/logos/github.svg";
 import FlatButton from "../../components/FlatButton/FlatButton";
 import IconButton from "../../components/IconButton/IconButton";
 
+import Ellipsis from "ftellipsis";
+
 class ProjectCard extends Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    // Clamp the information paragraph
+    var element = document.getElementsByClassName(
+      "project-card--description-panel-information"
+    )[0];
+    var ellipsis = new Ellipsis(element);
+    ellipsis.calc();
+    ellipsis.set();
+  }
 
   getBackgroundImage = () => {
     if (this.props.stop1 !== null && this.props.stop2 !== null) {

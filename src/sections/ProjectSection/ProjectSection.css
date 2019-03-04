@@ -6,6 +6,8 @@
 
   min-height: 100vh;
   overflow: hidden;
+
+  background-color: #eeeeee;
 }
 
 .project-section--title {

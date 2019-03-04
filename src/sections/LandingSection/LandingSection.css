@@ -1,10 +1,11 @@
 .landing-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 
   min-height: 100vh;
-  padding: 0 5vw;
+  padding: 0 10vw;
+  /* padding-bottom: 10vh; */
   overflow: hidden;
 }
 
@@ -12,17 +13,19 @@
   display: flex;
   flex-direction: column;
   align-content: space-between;
+
+  margin: 5vh 0;
 }
 
 .landing-section--title {
-  font-size: 4em;
+  font-size: 3em;
   color: rgba(0, 136, 255, 0.75);
 
   margin-bottom: 20px;
 }
 
 .landing-section--subtitle {
-  font-size: 1.75em;
+  font-size: 1.25em;
   line-height: 1.5em;
   color: rgba(0, 0, 0, 0.75);
 }
@@ -33,21 +36,32 @@
 }
 
 .landing-section--photo {
-  height: 80vw;
-  width: 80vw;
+  height: 70vw;
+  width: 70vw;
 
   border-radius: 50%;
 }
 
 @media screen and (orientation: landscape) {
   .landing-section {
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
+
+    padding: 0 5vw;
+  }
+
+  .landing-section--greeting {
+    width: 35vw;
+  }
+
+  .landing-section--title {
+    font-size: 4em;
   }
 
   .landing-section--photo {
-    height: 70vh;
-    width: 70vh;
+    height: 60vh;
+    width: 60vh;
   }
 }
 
