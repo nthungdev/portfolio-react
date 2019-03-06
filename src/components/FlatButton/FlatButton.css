@@ -1,19 +1,19 @@
 .flat-button {
   padding: 0.5em 1em;
   margin: 0;
-  background-color: rgba(23, 176, 195, 0.16);
+  background-color: black;
 
   box-sizing: border-box;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px 0 rgba(23, 176, 195, 0.16);
+  box-shadow: 3px 3px 20px 0 black;
 
   font-weight: 600;
   font-size: inherit;
   text-transform: uppercase;
   color: white;
 
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .flat-button-reverse {
@@ -24,11 +24,11 @@
   box-sizing: border-box;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px 0 rgba(23, 176, 195, 0.16);
+  box-shadow: 3px 3px 20px 0 black;
 
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: 600;
 
-  transition: 1s;
+  transition: 0.5s;
 }

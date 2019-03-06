@@ -4,6 +4,7 @@ import LandingSection from "./sections/LandingSection/LandingSection";
 import NavBar from "./components/NavBar/NavBar";
 import ProjectSection from "./sections/ProjectSection/ProjectSection";
 import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
+import ContactSection from "./sections/ContactSeciton/ContactSection";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <LandingSection />
           <ProjectSection />
           <ExperienceSection />
+          <ContactSection />
         </div>
       </div>
     );
