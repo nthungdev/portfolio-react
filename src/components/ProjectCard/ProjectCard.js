@@ -60,7 +60,7 @@ class ProjectCard extends Component {
           </div>
           <div className="project-card--description-panel-button-bar">
             <div className="project-card--description-panel-button-bar-left">
-              <FlatButton title="MORE" />
+              <FlatButton title="MORE" color={`#${this.props.stop1}`} />
             </div>
             <div className="project-card--description-panel-button-bar-right">
               <IconButton icon={GithubIcon} />

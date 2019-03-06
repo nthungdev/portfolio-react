@@ -3,6 +3,7 @@ import "./App.css";
 import LandingSection from "./sections/LandingSection/LandingSection";
 import NavBar from "./components/NavBar/NavBar";
 import ProjectSection from "./sections/ProjectSection/ProjectSection";
+import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <NavBar />
           <LandingSection />
           <ProjectSection />
+          <ExperienceSection />
         </div>
       </div>
     );
