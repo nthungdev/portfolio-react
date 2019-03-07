@@ -4,7 +4,9 @@
   color: white;
 
   padding: 2rem 20px;
+  /* border: 1px solid black; */
   border-radius: 10px 10px 0 0;
+  box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.2);
 
   background-color: rgba(218, 40, 84, 0.829);
 }
@@ -25,7 +27,8 @@
   border-radius: 0 0 10px 10px;
 
   /* temp */
-  border: 1px black solid;
+  /* border: 1px black solid; */
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .experience-card--body-description {

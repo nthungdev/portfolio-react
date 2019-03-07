@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
 
+  padding: 20px 0;
   background-color: grey;
 }
 
@@ -12,7 +13,7 @@
   /* flex-wrap: wrap; */
   justify-content: center;
 
-  height: 8vh;
+  height: 5vh;
   margin: 20px 0;
 }
 

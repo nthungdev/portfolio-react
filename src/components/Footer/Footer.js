@@ -11,13 +11,19 @@ class Footer extends Component {
       <div className="footer">
         <div className="footer--social">
           <div className="footer--social-button">
-            <IconButton icon={Github} />
+            <IconButton icon={Github} href="https://github.com/nthungdev" />
           </div>
           <div className="footer--social-button">
-            <IconButton icon={LinkedIn} />
+            <IconButton
+              icon={LinkedIn}
+              href="https://www.linkedin.com/in/nthungdev/"
+            />
           </div>
           <div className="footer--social-button">
-            <IconButton icon={Facebook} />
+            <IconButton
+              icon={Facebook}
+              href="https://www.facebook.com/nthungdev/"
+            />
           </div>
         </div>
         <div className="footer--name">

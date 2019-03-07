@@ -24,6 +24,7 @@ class LandingSection extends Component {
     console.log(this.state.landingSectionHeight);
     return (
       <main
+        id="landing-section"
         className="landing-section"
         style={
           this.state.landingSectionHeight

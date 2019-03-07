@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 class ContactSection extends Component {
   render() {
     return (
-      <div className="contact-section">
+      <div id="contact-section" className="contact-section">
         <div className="contact-section--title">
           <h1>Contact</h1>
         </div>

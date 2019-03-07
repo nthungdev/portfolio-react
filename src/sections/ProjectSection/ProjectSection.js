@@ -38,7 +38,7 @@ class ProjectSection extends Component {
     });
 
     return (
-      <div className="project-section">
+      <div id="project-section" className="project-section">
         <div className="project-section--title">
           <h1>Top Projects</h1>
         </div>
