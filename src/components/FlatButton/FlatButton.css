@@ -6,7 +6,6 @@
   box-sizing: border-box;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px 0 black;
 
   font-weight: 600;
   font-size: inherit;
@@ -24,7 +23,7 @@
   box-sizing: border-box;
   border: 1px solid;
   border-radius: 10px;
-  box-shadow: 3px 3px 20px 0 black;
+  /* box-shadow: 3px 3px 20px 0 black; */
 
   color: black;
   text-transform: uppercase;

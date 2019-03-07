@@ -7,10 +7,6 @@ import IconButton from "../../components/IconButton/IconButton";
 import Ellipsis from "ftellipsis";
 
 class ProjectCard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     // Clamp the information paragraph
     var element = document.getElementsByClassName(
@@ -42,6 +38,7 @@ class ProjectCard extends Component {
         >
           <div className="project-card--preview-panel-image-wrapper">
             <img
+              alt="project"
               className="project-card--preview-panel-image"
               src={this.props.image}
             />
@@ -63,7 +60,7 @@ class ProjectCard extends Component {
               <FlatButton title="MORE" color={`#${this.props.stop1}`} />
             </div>
             <div className="project-card--description-panel-button-bar-right">
-              <IconButton icon={GithubIcon} />
+              <IconButton icon={GithubIcon} href={this.props.githubURL} />
             </div>
           </div>
         </div>

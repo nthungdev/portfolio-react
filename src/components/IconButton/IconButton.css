@@ -1,6 +1,7 @@
 .icon-button {
   margin: 0;
   object-fit: contain;
+  height: 100%;
 }
 
 .icon-button--icon {

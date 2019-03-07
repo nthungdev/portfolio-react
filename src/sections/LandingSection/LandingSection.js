@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavBar from "../../components/NavBar/NavBar";
 import PhotoOfMe from "../../assets/images/small/me-square.jpg";
 import "./LandingSection.css";
 

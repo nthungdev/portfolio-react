@@ -110,7 +110,7 @@ class NavBar extends Component {
             className="nav-bar--close"
             style={{ height: this.state.navBarHeight }}
           >
-            <img onClick={this.closeSideNav} src={Close} />
+            <img alt="close button" onClick={this.closeSideNav} src={Close} />
           </div>
 
           <div className="nav-bar--button-bar-button-wrapper">

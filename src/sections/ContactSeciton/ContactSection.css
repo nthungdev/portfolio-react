@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   /* justify-content: space-evenly; */
-  /* align-items: center; */
+  align-items: center;
 
   min-height: 100vh;
   padding: 0 15vw;
@@ -28,6 +28,8 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-row-gap: 20px;
+
+  width: 100%;
 }
 
 .contact-section--form input,
@@ -48,6 +50,14 @@
   font-size: 1rem;
 }
 
+.contact-section--form-submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
 @media screen and (min-width: 1024px) {
   .contact-section--title {
     font-size: 4em;
@@ -58,8 +68,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "name email"
-      "message message";
+      "message message"
+      "send send";
     grid-column-gap: 20px;
+
+    width: 70%;
   }
 
   .contact-section--form-name {
@@ -72,5 +85,9 @@
 
   .contact-section--form-message {
     grid-area: message;
+  }
+
+  .contact-section--form-submit {
+    grid-area: send;
   }
 }

@@ -31,7 +31,7 @@ class ProjectSection extends Component {
           title={item.title}
           description={item.description}
           image={item.imageURL}
-          github={item.githubURL}
+          githubURL={item.githubURL}
           projectURL={item.projectURL}
         />
       );

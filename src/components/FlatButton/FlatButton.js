@@ -10,12 +10,9 @@ class FlatButton extends Component {
   }
 
   onHover = event => {
-    this.setState(
-      {
-        reverse: !this.state.reverse
-      },
-      () => console.log(this.state.reverse)
-    );
+    this.setState({
+      reverse: !this.state.reverse
+    });
   };
 
   render() {
@@ -32,10 +29,7 @@ class FlatButton extends Component {
           style={{
             backgroundColor: this.state.reverse ? "white" : this.props.color,
             borderColor: this.props.color,
-            color: this.state.reverse ? this.props.color : "white",
-            boxShadow: this.state.reverse
-              ? `3px 3px 20px 0 #${this.props.color}`
-              : "none"
+            color: this.state.reverse ? this.props.color : "white"
           }}
         >
           <p>{this.props.title}</p>
