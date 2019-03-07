@@ -4,7 +4,7 @@ import "./IconButton.css";
 class IconButton extends Component {
   render() {
     return (
-      <a href={this.props.href} target="_blank">
+      <a href={this.props.href} target="_blank" rel="noopener noreferrer">
         <div className="icon-button" onClick={this.props.onClick}>
           <img
             alt="icon button"
