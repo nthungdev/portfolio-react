@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./ContactSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
-import Footer from "../../components/Footer/Footer";
 
 class ContactSection extends Component {
   render() {
