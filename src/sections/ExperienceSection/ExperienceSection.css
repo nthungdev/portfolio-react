@@ -4,8 +4,9 @@
   align-items: center;
   /* justify-content: space-evenly; */
 
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 0 5vw;
+  padding-bottom: 40px;
 }
 
 .experience-section--title {

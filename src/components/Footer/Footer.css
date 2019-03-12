@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px 0;
+  background-color: grey;
+}
+
+.footer--social {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+
+  height: 5vh;
+  margin: 20px 0;
+}
+
+.footer--social-button {
+  margin: 0 20px;
+}

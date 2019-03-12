@@ -12,7 +12,6 @@
 .landing-section--greeting {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
 
   margin: 5vh 0;
 }
@@ -53,6 +52,8 @@
 
   .landing-section--greeting {
     width: 35vw;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .landing-section--title {
@@ -62,5 +63,11 @@
   .landing-section--photo {
     height: 60vh;
     width: 60vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .landing-section--title {
+    font-size: 8em;
   }
 }

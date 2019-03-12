@@ -3,34 +3,29 @@
   font-weight: 600;
   font-size: 1.5em;
 
-  /* background-color: aquamarine; */
   display: flex;
   align-items: center;
-}
-
-a:link.nav-button,
-a:visited.nav-button,
-a:hover.nav-button,
-a:active.nav-button {
-  display: flex;
   color: #0088ff;
   text-decoration: none;
+
+  transition: 1s;
 }
 
-a.disabled.nav-button {
-  /* padding: 5px 10px; */
+.nav-button.disabled {
   color: rgb(181, 220, 255);
   text-decoration: none;
+
+  transition: 0.5s;
 }
 
 .nav-button--fade-out {
   animation-name: nav-button--fade-out;
-  animation-duration: 0.2s;
+  animation-duration: 0.5s;
 }
 
 .nav-button--fade-in {
   animation-name: nav-button--fade-in;
-  animation-duration: 0.2s;
+  animation-duration: 0.5s;
 }
 
 @keyframes nav-button--fade-out {

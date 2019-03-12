@@ -13,36 +13,28 @@ class NavBar extends Component {
       navBarHeight: "",
       buttons: [
         {
-          text: "Home",
+          text: "Projects",
           className: "nav-button",
-          isDisabled: false,
-          href: "#"
+          disabled: false,
+          href: "#project-section"
         },
         {
           text: "Experience",
           className: "nav-button",
           disabled: false,
-          href: "#"
-        },
-        {
-          text: "Photography",
-          className: "nav-button",
-          disabled: false,
-          href: "#"
+          href: "#experience-section"
         },
         {
           text: "Contact",
           className: "nav-button",
           disabled: false,
-          href: "#"
+          href: "#contact-section"
         }
       ]
     };
     this.onHover = this.onMouseOver.bind(this);
     this.onClick = this.onClick.bind(this);
   }
-
-  componentDidMount() {}
 
   onMouseOver(button) {
     const buttons = [...this.state.buttons];
@@ -82,7 +74,9 @@ class NavBar extends Component {
   };
 
   onClick = () => {
-    this.closeSideNav();
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+      this.closeSideNav();
+    }
   };
 
   render() {
@@ -120,7 +114,6 @@ class NavBar extends Component {
                 key={this.state.buttons.indexOf(button)}
               >
                 <NavButton
-                  padding="50px var(--side-margin)"
                   className={button.className}
                   text={button.text}
                   href={button.href}
