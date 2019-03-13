@@ -12,8 +12,24 @@
 .landing-section--greeting {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   margin: 5vh 0;
+  justify-self: center;
+  width: 70vw;
+}
+
+.landing-section--photo-wrapper {
+  grid-area: photo;
+}
+
+.landing-section--buttons {
+  justify-self: center;
+
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
 }
 
 .landing-section--title {
@@ -45,15 +61,45 @@
   .landing-section {
     justify-content: space-evenly;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
 
-    padding: 0 5vw;
+    /* padding: 0 5vw; */
+  }
+
+  .landing-section {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: 3fr 4fr;
+    grid-template-areas:
+      "greetings photo"
+      "buttons photo";
+
+    padding: 10vh 10vw;
+    box-sizing: border-box;
+  }
+
+  .landing-section--photo-wrapper {
+    grid-area: photo;
   }
 
   .landing-section--greeting {
+    grid-area: greetings;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-self: start;
+
     width: 35vw;
-    align-items: flex-start;
-    justify-content: flex-start;
+
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  .landing-section--buttons {
+    grid-area: buttons;
+    margin: 0;
+    margin-top: 40px;
+    justify-self: start;
   }
 
   .landing-section--title {
@@ -61,13 +107,13 @@
   }
 
   .landing-section--photo {
-    height: 60vh;
-    width: 60vh;
+    width: 100%;
+    height: auto;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .landing-section--title {
-    font-size: 8em;
+    font-size: 6em;
   }
 }

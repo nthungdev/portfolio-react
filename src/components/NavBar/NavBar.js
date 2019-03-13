@@ -64,8 +64,9 @@ class NavBar extends Component {
       navBarHeight: document.getElementById("nav-bar").scrollHeight + "px"
     });
     document.getElementById("nav-bar--button-bar").style.width = "75vw";
+    // document.getElementById("nav-bar--button-bar-blackout").style.width = "30vw";
     document.getElementById("nav-bar--button-bar-blackout").style.width =
-      "30vw";
+      "100vw";
   };
 
   closeSideNav = () => {
@@ -83,7 +84,9 @@ class NavBar extends Component {
     return (
       <nav id="nav-bar" className="nav-bar">
         <div className="nav-bar--logo-wrapper">
-          <img src={PageLogo} alt="Logo of the page" />
+          <a href="#landing-section">
+            <img src={PageLogo} alt="Logo of the page" />
+          </a>
         </div>
         <div className="nav-bar--hamburger-wrapper">
           <img

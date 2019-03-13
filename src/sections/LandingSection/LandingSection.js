@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PhotoOfMe from "../../assets/images/small/me-square.jpg";
 import "./LandingSection.css";
+import FlatButton from "../../components/FlatButton/FlatButton";
+import Resume from "../../assets/resume-hung.pdf";
 
 class LandingSection extends Component {
   constructor(props) {
@@ -50,6 +52,11 @@ class LandingSection extends Component {
             alt="Hung Nguyen"
           />
         </aside>
+        <div className="landing-section--buttons">
+          <div className="landing-section--buttons-resume">
+            <FlatButton title="My Resume" href={Resume} color="#0088ff" />
+          </div>
+        </div>
       </main>
     );
   }

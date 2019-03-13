@@ -17,6 +17,10 @@
   margin-bottom: 40px;
 }
 
+.experience-section--experience-card {
+  margin-bottom: 50px;
+}
+
 @media screen and (min-width: 1024px) {
   .experience-section--title {
     font-size: 4em;

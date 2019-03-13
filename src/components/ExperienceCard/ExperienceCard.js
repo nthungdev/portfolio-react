@@ -19,32 +19,37 @@ class ExperienceCard extends Component {
       );
     });
 
+    var descriptions = [];
+    this.props.description.forEach(item => {
+      descriptions.push(<p>&middot; {item}</p>);
+    });
+
     return (
       <div className="experience-card">
-        <div className="experience-card--header">
-          <p>Coding Hub</p>
+        <div
+          className="experience-card--header"
+          style={{ backgroundColor: this.props.accentColor }}
+        >
+          <p>{this.props.organization}</p>
         </div>
         <div className="experience-card--body">
           <div className="experience-card--body-subheader">
             <div className="experience-card--body-subheader-role">
-              <p>Software Developer</p>
+              <p>{this.props.position}</p>
             </div>
             <div className="experience-card--body-subheader-time">
-              <p>Sep 2018 - Present</p>
+              <p>{this.props.duration}</p>
             </div>
           </div>
           <div className="experience-card--body-description">
-            <p>• Sed sagittis eros in libero porta molestie.</p>
-            <p>• Suspendisse mollis tellus non blandit vulputate.</p>
-            <p>
-              • Curabitur a nulla sollicitudin, congue felis a, lacinia arcu.
-            </p>
+            {descriptions}
           </div>
           <div className="experience-card--body-button-wrapper">
             <FlatButton
               title="More"
               reverse={true}
               color={this.props.accentColor}
+              href={this.props.organizationURL}
             />
           </div>
           <hr />

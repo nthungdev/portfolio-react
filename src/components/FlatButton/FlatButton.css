@@ -13,6 +13,7 @@
   color: white;
 
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .flat-button-reverse {
@@ -30,4 +31,5 @@
   font-weight: 600;
 
   transition: 0.5s;
+  cursor: pointer;
 }

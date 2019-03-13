@@ -1,0 +1,46 @@
+{
+  "experiences": [
+    {
+      "organization": "Coding Hub",
+      "position": "Co-founder, Tech Lead",
+      "duration": "Sep 2018 - Present",
+      "description": [
+        "Organized and leaded weekly Scrum meeting with project members.",
+        "Implemented software solutions that improved college experience through web and mobile applications.",
+        "Developed cross-platform mobile applications and RESTful APIs for server-side with Flutter and Express JS."
+      ],
+      "organizationLogoURL": "",
+      "color": "rgba(218, 40, 84, 0.829)",
+      "organizationURL": "https://www.psushuttle.com/",
+      "tags": "JavaScript, ReactJs, ExpressJs, Flutter, Firebase, Github, Adobe XD, Asana"
+    },
+    {
+      "organization": "Innovation Technology Development Corporation",
+      "position": ".NET Developer Intern",
+      "duration": "May 2018 – August 2018",
+      "description": [
+        "Directed internship team to deliver a desktop application managing tickets in a car parking lot.",
+        "Leveraged Redmine, Subversion, and Trello to manage the project in a team of 6.",
+        "Refactored outdated code and integrated 50% new functionalities of the project."
+      ],
+      "organizationLogoURL": "http://www.itd.com.vn/en/media/image/MediaCategory/media_attachment/22/img.jpg",
+      "color": "",
+      "organizationURL": "http://www.itd.com.vn/en/",
+      "tags": ".NET, C#, WPF, Subversion, Redmine, Trello"
+    },
+    {
+      "organization": "State University of New York at Plattsburgh",
+      "position": "Teaching Assistant",
+      "duration": "January 2018 – December 2018",
+      "description": [
+        "Coordinated review sessions for over 50 students studying Python and Discrete Math.",
+        "Reinforce lessons presented by professors by covering materials with students one-on-one or in small groups.",
+        "Monitor lab sessions and support student lab assignments."
+      ],
+      "organizationLogoURL": "",
+      "color": "",
+      "organizationURL": "https://www.plattsburgh.edu/",
+      "tags": "Python, Discrete Math"
+    }
+  ]
+}
