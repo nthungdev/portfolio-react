@@ -40,7 +40,7 @@
 
 .experience-card--body-description {
   line-height: 1.75em;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .experience-card--body-button-wrapper {
@@ -48,7 +48,7 @@
   justify-content: flex-end;
 
   margin: 20px 0;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .experience-card--body-button-chips {
