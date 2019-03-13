@@ -24,7 +24,7 @@
         "Refactored outdated code and integrated 50% new functionalities of the project."
       ],
       "organizationLogoURL": "http://www.itd.com.vn/en/media/image/MediaCategory/media_attachment/22/img.jpg",
-      "color": "",
+      "color": "#0984B1",
       "organizationURL": "http://www.itd.com.vn/en/",
       "tags": ".NET, C#, WPF, Subversion, Redmine, Trello"
     },
@@ -38,9 +38,9 @@
         "Monitor lab sessions and support student lab assignments."
       ],
       "organizationLogoURL": "",
-      "color": "",
+      "color": "#CE1830",
       "organizationURL": "https://www.plattsburgh.edu/",
-      "tags": "Python, Discrete Math"
+      "tags": "Python, Discrete Math, Customer Service"
     }
   ]
 }
