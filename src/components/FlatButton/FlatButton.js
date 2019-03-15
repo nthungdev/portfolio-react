@@ -28,6 +28,7 @@ class FlatButton extends Component {
             className={
               this.state.reverse ? "flat-button-reverse" : "flat-button"
             }
+            type={this.props.type}
             onClick={this.props.onClick}
             style={{
               backgroundColor: this.state.reverse ? "white" : this.props.color,

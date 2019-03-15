@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./ContactSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
-import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/firestore";
 import iplocation from "iplocation";
 import ipify from "ipify";
-require("firebase/firestore");
 
 class ContactSection extends Component {
   constructor(props) {
@@ -31,22 +31,25 @@ class ContactSection extends Component {
     console.log(event.target.value);
   };
 
-  onSendMessage = () => {
+  onSendMessage = event => {
     ipify().then(ip => {
       iplocation(ip)
         .then(res => {
           var message = {
-            ...res,
-            time: Date(),
             name: this.state.name,
             email: this.state.email,
-            message: this.state.message
+            message: this.state.message,
+            time: Date(),
+            information: {
+              ...res
+            }
           };
 
-          firebase
-            .firestore()
-            .collection("messages")
-            .add(message)
+          const messagesRef = firebase.firestore().collection("messages");
+
+          messagesRef
+            .doc(Date.now().toString())
+            .set(message)
             .then(() => {
               console.log("Successful");
             });
@@ -55,6 +58,8 @@ class ContactSection extends Component {
           console.log(err);
         });
     });
+
+    // event.preventDefault();
   };
 
   render() {
@@ -68,12 +73,13 @@ class ContactSection extends Component {
           <p>Need technical help? </p>
           <p>Send me a message... </p>
         </div>
-        <div className="contact-section--form">
+        <form className="contact-section--form" onSubmit={this.onSendMessage}>
           <div className="contact-section--form-name">
             <input
               type="text"
               placeholder="Enter your full name"
               onChange={this.onNameChanged}
+              value={this.state.name}
             />
           </div>
           <div className="contact-section--form-email">
@@ -81,6 +87,7 @@ class ContactSection extends Component {
               type="email"
               placeholder="Enter your email"
               onChange={this.onEmailChanged}
+              value={this.state.email}
             />
           </div>
           <div className="contact-section--form-message">
@@ -89,12 +96,17 @@ class ContactSection extends Component {
               placeholder="Leave your message..."
               rows="6"
               onChange={this.onMessageChanged}
+              value={this.state.message}
             />
           </div>
           <div className="contact-section--form-submit">
-            <FlatButton title="Send" onClick={this.onSendMessage} />
+            <FlatButton
+              title="Send"
+              // onClick={this.onSendMessage}
+              type="submit"
+            />
           </div>
-        </div>
+        </form>
       </div>
     );
   }

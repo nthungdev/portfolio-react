@@ -7,7 +7,8 @@ import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
 
-import firebase from "firebase";
+import firebase from "firebase/app";
+import "firebase/firestore";
 import { firebaseConfig } from "./secrets";
 import ipify from "ipify";
 import iplocation from "iplocation";
@@ -27,9 +28,13 @@ class App extends Component {
           firebase
             .firestore()
             .collection("visitors")
-            .add(visitor)
+            .doc(Date.now().toString())
+            .set(visitor)
             .then(data => {
               console.log("Successful");
+            })
+            .catch(error => {
+              console.log(error);
             });
         })
         .catch(err => {
