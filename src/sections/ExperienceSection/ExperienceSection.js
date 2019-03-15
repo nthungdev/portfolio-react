@@ -8,7 +8,6 @@ class ExperienceSection extends Component {
     var experienceCards = [];
     const experiences = ExperienceInfo.experiences;
     experiences.forEach(item => {
-      console.log(item);
       experienceCards.push(
         <div
           key={experiences.indexOf(item)}
@@ -32,13 +31,7 @@ class ExperienceSection extends Component {
         <div className="experience-section--title">
           <h1>Experience</h1>
         </div>
-        <div className="experience-section--cards">
-          {experienceCards}
-          {/* <ExperienceCard
-            accentColor="rgba(218, 40, 84, 0.829)"
-            chips="Flutter, Github, Adobe XD, Asana, ReactJs, JavaScript, ExpressJs"
-          /> */}
-        </div>
+        <div className="experience-section--cards">{experienceCards}</div>
       </div>
     );
   }

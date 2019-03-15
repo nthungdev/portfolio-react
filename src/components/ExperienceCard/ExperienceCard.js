@@ -21,7 +21,9 @@ class ExperienceCard extends Component {
 
     var descriptions = [];
     this.props.description.forEach(item => {
-      descriptions.push(<p>&middot; {item}</p>);
+      descriptions.push(
+        <p key={this.props.description.indexOf(item)}>&middot; {item}</p>
+      );
     });
 
     return (
