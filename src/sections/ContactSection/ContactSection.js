@@ -6,6 +6,8 @@ import "firebase/firestore";
 import iplocation from "iplocation";
 import ipify from "ipify";
 
+const SENT_MESSAGE = "Your message was sent to Hung Nguyen.";
+
 class ContactSection extends Component {
   constructor(props) {
     super(props);
@@ -52,6 +54,13 @@ class ContactSection extends Component {
             .set(message)
             .then(() => {
               console.log("Successful");
+              alert(SENT_MESSAGE);
+              /// Reset the contact content
+              this.setState({
+                name: "",
+                email: "",
+                message: ""
+              });
             });
         })
         .catch(err => {
@@ -59,7 +68,7 @@ class ContactSection extends Component {
         });
     });
 
-    // event.preventDefault();
+    event.preventDefault();
   };
 
   render() {
