@@ -36,7 +36,7 @@ class LandingSection extends Component {
       >
         <section className="landing-section--greeting">
           <div className="landing-section--title-wrapper">
-            <h1 className="landing-section--title">I'm Hung,</h1>
+            <h1 className="landing-section--title">Hello! My name's Hung,</h1>
           </div>
           <div className="landing-section--subtitle">
             <p>
