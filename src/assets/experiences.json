@@ -1,6 +1,34 @@
 {
   "experiences": [
     {
+      "organization": "Ergon Training",
+      "position": "Mobile and Full-stack Developer",
+      "duration": "May 2019 - Present",
+      "description": [
+        "Architected and developed a cross-platform mobile app to assist athletes manage their performance on exercise machines.",
+        "Managed and deployed alpha, beta, and production releases on Google Play Console and App Store Connect.",
+        "Constructed a web application for coaches to build and schedule workout sessions to clients."
+      ],
+      "organizationLogoURL": "https://images.squarespace-cdn.com/content/59fcbb331f318daaca0a6779/1548355067899-YAMLADEBHDH8KW1PPW8R/Logo-Black-Transparent.png?content-type=image%2Fpng",
+      "color": "#5087C6",
+      "organizationURL": "https://ergontraining.com",
+      "tags": "JavaScript, ReactJs, ExpressJs, Firebase, Flutter, Dart, Github"
+    },
+    {
+      "organization": "Copart",
+      "position": "Software Engineering Intern",
+      "duration": "May 2019 - August 2019",
+      "description": [
+        "Integrated OKTA Single Sign-On into an existing web application to simplify and enhance security of the authentication process.",
+        "Improved outdated custom React components with React Hooks, which increased better performance and reduced bugs.",
+        "Collaborated with other engineers to achieve optimal application architecture and design."
+      ],
+      "organizationLogoURL": "https://copartcommunity.com/wp-content/uploads/2016/03/copart-logo.png",
+      "color": "#004990",
+      "organizationURL": "https://www.copart.com",
+      "tags": "JavaScript, ReactJs, ExpressJs, Firebase, Github, JIRA, Agile"
+    },
+    {
       "organization": "Coding Hub",
       "position": "Co-founder, Tech Lead",
       "duration": "Sep 2018 - Present",
@@ -9,7 +37,7 @@
         "Implemented software solutions that improved college experience through web and mobile applications.",
         "Developed cross-platform mobile applications and RESTful APIs for server-side with Flutter and Express JS."
       ],
-      "organizationLogoURL": "",
+      "organizationLogoURL": "https://www.coding-hub.com",
       "color": "rgba(218, 40, 84, 0.829)",
       "organizationURL": "https://www.psushuttle.com/",
       "tags": "JavaScript, ReactJs, ExpressJs, Flutter, Firebase, Github, Adobe XD, Asana"
