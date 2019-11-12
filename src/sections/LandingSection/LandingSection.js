@@ -1,29 +1,29 @@
-import React, { Component } from "react";
-import PhotoOfMe from "../../assets/images/small/me-square.jpg";
-import "./LandingSection.css";
-import FlatButton from "../../components/FlatButton/FlatButton";
-import Resume from "../../assets/resume-hung.pdf";
+import React, { Component } from 'react'
+import PhotoOfMe from '../../assets/images/small/me-square.jpg'
+import './LandingSection.css'
+import FlatButton from '../../components/FlatButton/FlatButton'
+import Resume from '../../assets/resume-hung.pdf'
 
 class LandingSection extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      landingSectionHeight: ""
-    };
+      landingSectionHeight: ''
+    }
   }
 
   componentDidMount() {
     // Get the remaining height of the screen excluding the nav bar
     this.setState({
       landingSectionHeight:
-        "calc(100vh - " +
-        document.getElementById("nav-bar").scrollHeight +
-        "px)"
-    });
+        'calc(100vh - ' +
+        document.getElementById('nav-bar').scrollHeight +
+        'px)'
+    })
   }
 
   render() {
-    console.log(this.state.landingSectionHeight);
+    console.log(this.state.landingSectionHeight)
     return (
       <main
         id="landing-section"
@@ -36,7 +36,10 @@ class LandingSection extends Component {
       >
         <section className="landing-section--greeting">
           <div className="landing-section--title-wrapper">
-            <h1 className="landing-section--title">Hello! My name's Hung,</h1>
+            <h1 className="landing-section--title">
+              Hello!
+              <br /> My name's Hung,
+            </h1>
           </div>
           <div className="landing-section--subtitle">
             <p>
@@ -58,8 +61,8 @@ class LandingSection extends Component {
           </div>
         </div>
       </main>
-    );
+    )
   }
 }
 
-export default LandingSection;
+export default LandingSection

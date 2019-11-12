@@ -33,7 +33,7 @@
 }
 
 .landing-section--title {
-  font-size: 3em;
+  font-size: 2em;
   color: rgba(0, 136, 255, 0.75);
 
   margin-bottom: 20px;
@@ -71,8 +71,8 @@
     grid-template-columns: 4fr 3fr;
     grid-template-rows: 3fr 4fr;
     grid-template-areas:
-      "greetings photo"
-      "buttons photo";
+      'greetings photo'
+      'buttons photo';
 
     padding: 10vh 10vw;
     box-sizing: border-box;
@@ -86,7 +86,7 @@
     grid-area: greetings;
     display: flex;
     flex-direction: column;
-    /* justify-content: start; */
+    justify-content: start;
     justify-self: start;
 
     width: 35vw;
@@ -103,17 +103,11 @@
   }
 
   .landing-section--title {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .landing-section--photo {
     width: 100%;
     height: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .landing-section--title {
-    font-size: 4em;
   }
 }
