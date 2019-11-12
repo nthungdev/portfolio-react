@@ -1,40 +1,43 @@
-import React, { Component } from "react";
-import "./Footer.css";
-import IconButton from "../IconButton/IconButton";
-import LinkedIn from "../../assets/logos/linkedin.png";
-import Github from "../../assets/logos/github.svg";
-import Facebook from "../../assets/logos/facebook.png";
+import React from 'react'
 
-class Footer extends Component {
-  render() {
-    return (
-      <div className="footer">
-        <div className="footer--social">
-          <div className="footer--social-button">
-            <IconButton icon={Github} href="https://github.com/nthungdev" />
+import IconButton from '../IconButton/IconButton'
+import LinkedIn from '../../assets/logos/linkedin.png'
+import Github from '../../assets/logos/github.svg'
+import Facebook from '../../assets/logos/facebook.png'
+
+import styles from './Footer.module.css'
+
+const Footer = () => {
+  const icons = [
+    {
+      icon: LinkedIn,
+      url: 'https://www.linkedin.com/in/nthungdev'
+    },
+    {
+      icon: Github,
+      url: 'https://github.com/nthungdev'
+    },
+    {
+      icon: Facebook,
+      url: 'https://www.facebook.com/nthungdev'
+    }
+  ]
+
+  return (
+    <div className={styles.root}>
+      <div className={styles.social}>
+        {icons.map((icon, index) => (
+          <div key={index}>
+            <IconButton icon={icon.icon} href={icon.url} />
           </div>
-          <div className="footer--social-button">
-            <IconButton
-              icon={LinkedIn}
-              href="https://www.linkedin.com/in/nthungdev/"
-            />
-          </div>
-          <div className="footer--social-button">
-            <IconButton
-              icon={Facebook}
-              href="https://www.facebook.com/nthungdev/"
-            />
-          </div>
-        </div>
-        <div className="footer--name">
-          <p>Hung Nguyen</p>
-        </div>
-        <div className="footer--copyrights">
-          <p>© Copyrights Reserved 2019</p>
-        </div>
+        ))}
       </div>
-    );
-  }
+      <div className={styles.text}>
+        <p>Hung Nguyen</p>
+        <p>© Copyrights Reserved 2019</p>
+      </div>
+    </div>
+  )
 }
 
-export default Footer;
+export default Footer

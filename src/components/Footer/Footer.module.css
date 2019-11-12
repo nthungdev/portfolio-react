@@ -1,22 +1,28 @@
-.footer {
+.root {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding: 20px 0;
-  background-color: grey;
+  background-color: rgb(211, 211, 211);
 }
 
-.footer--social {
+.social {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   justify-content: center;
 
-  height: 5vh;
   margin: 20px 0;
 }
 
-.footer--social-button {
-  margin: 0 20px;
+.social > * {
+  height: 50px;
+}
+
+.social > *:nth-child(even) {
+  margin: 0 10px;
+}
+
+.text {
+  text-align: center;
 }
