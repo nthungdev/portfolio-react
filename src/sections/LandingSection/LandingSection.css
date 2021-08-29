@@ -86,7 +86,7 @@
     grid-area: greetings;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     justify-self: start;
 
     width: 35vw;

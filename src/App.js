@@ -1,62 +1,48 @@
-import React, { Component } from "react";
-import "./App.css";
-import LandingSection from "./sections/LandingSection/LandingSection";
-import NavBar from "./components/NavBar/NavBar";
-import ProjectSection from "./sections/ProjectSection/ProjectSection";
-import ExperienceSection from "./sections/ExperienceSection/ExperienceSection";
-import ContactSection from "./sections/ContactSection/ContactSection";
-import Footer from "./components/Footer/Footer";
+import React, { useEffect } from 'react'
+import ip from 'ip'
+import iplocation from 'iplocation'
+import { getFirestore, setDoc, doc } from 'firebase/firestore'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import firebase from "firebase/app";
-import "firebase/firestore";
-import { firebaseConfig } from "./secrets";
-import ipify from "ipify";
-import iplocation from "iplocation";
+import Deprecated from 'pages/Deprecated'
+import UnderConstruction from 'pages/UnderConstruction'
 
-class App extends Component {
-  componentWillMount() {
-    firebase.initializeApp(firebaseConfig);
+import 'App.css'
 
-    ipify().then(ip => {
-      iplocation(ip)
-        .then(res => {
-          var visitor = {
+const App = () => {
+  useEffect(() => {
+    const saveVisitor = () => {
+      iplocation(ip.address())
+        .then((res) =>
+          setDoc(doc(getFirestore(), 'visitors', Date.now().toString()), {
             ...res,
-            time: Date()
-          };
-
-          firebase
-            .firestore()
-            .collection("visitors")
-            .doc(Date.now().toString())
-            .set(visitor)
-            .then(data => {
-              console.log("Successful");
-            })
-            .catch(error => {
-              console.log(error);
-            });
+            time: Date(),
+          })
+        )
+        .then(() => {
+          console.log('Successful')
         })
-        .catch(err => {
-          console.log(err);
-        });
-    });
-  }
+        .catch((error) => {
+          console.log(error)
+        })
+    }
+    if (process.env.NODE_ENV === 'production') {
+      saveVisitor()
+    }
+  }, [])
 
-  render() {
-    return (
-      <div className="root">
-        <div className="content">
-          <NavBar />
-          <LandingSection />
-          <ProjectSection />
-          <ExperienceSection />
-          <ContactSection />
-          <Footer />
-        </div>
-      </div>
-    );
-  }
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/deprecated">
+          <Deprecated />
+        </Route>
+        <Route path="/">
+          <UnderConstruction />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
